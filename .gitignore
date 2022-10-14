@@ -2,11 +2,7 @@
 .RData
 .Rhistory
 node_modules
-package-lock.json
-__pycache__
-venv
-traefik
-.env
-secret.h
 secret
 venv
+.env
+__pycache__
