@@ -39,6 +39,11 @@ data_form.addEventListener("submit", e => {
     } else if (opt === "range" && formData.get("lte") !== "" && formData.get("gte") !== "") {
         let gte = new Date(formData.get("gte"));
         let lte = new Date(formData.get("lte"));
+        console.log(gte.toLocaleString())
+        let gte_str = gte.toISOString().replace("T", "_").split(".")[0];
+        let lte_str = lte.toISOString().replace("T", "_").split(".")[0];
+        formData.set("gte", gte_str);
+        formData.set("lte", lte_str);
 
 
         if (!(gte < lte)) {
@@ -56,8 +61,7 @@ data_form.addEventListener("submit", e => {
 
     let search = new URLSearchParams(formData);
 
-    let queryString = search.toString().replace(/T/g, "_");
-    let url = `https://api.progettochearia.it/v1/resources/datas?${queryString}`;
+    let url = `https://api.progettochearia.it/v1/resources/datas?${search.toString()}`;
     let url_link = document.createElement("a")
     url_link.setAttribute("href", url);
     url_link.setAttribute("target", "_blank");
