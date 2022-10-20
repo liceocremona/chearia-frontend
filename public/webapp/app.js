@@ -17,6 +17,21 @@ function data_required(advise) {
 
 }
 
+function formatDate(date) {
+    let day = date.getDate().toString();
+    if (day.length == 1) day = "0" + day;
+    let month = (date.getMonth() + 1).toString();
+    if (month.length == 1) month = "0" + month;
+    let year = date.getFullYear().toString();
+    let hour = date.getHours().toString();
+    if (hour.length == 1) hour = "0" + hour;
+    let minute = date.getMinutes().toString();
+    if (minute.length == 1) minute = "0" + minute;
+    let second = date.getSeconds().toString();
+    if (second.length == 1) second = "0" + second;
+    return `${year}-${month}-${day}_${hour}:${minute}:${second}`;
+}
+
 data_form.addEventListener("submit", e => {
     e.preventDefault();
     let formData = new FormData(data_form);
@@ -40,8 +55,8 @@ data_form.addEventListener("submit", e => {
         let gte = new Date(formData.get("gte"));
         let lte = new Date(formData.get("lte"));
         console.log(gte.toLocaleString())
-        let gte_str = gte.toISOString().replace("T", "_").split(".")[0];
-        let lte_str = lte.toISOString().replace("T", "_").split(".")[0];
+        let gte_str = formatDate(gte);
+        let lte_str = formatDate(lte);
         formData.set("gte", gte_str);
         formData.set("lte", lte_str);
 
