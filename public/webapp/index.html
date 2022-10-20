@@ -5,81 +5,84 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Progetto CHeArIA</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
-    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
-    <link rel="stylesheet" href="dati.css">
+    <title>CHeArIA WebApp</title>
+    <style>
+        #day-picker {
+            display: block;
+        }
+        
+        #range-picker {
+            display: none;
+        }
+        
+        .list-id {
+            display: flex;
+        }
+        
+        .data-id {
+            flex: 50%;
+        }
+    </style>
 </head>
 
 <body>
-    <!--Navbar for mobile-->
-    <nav id="respnav">
-        <div class="respnavitem">
-            <a href="https://progettochearia.it"><span class="iconify-inline" data-icon="clarity:home-solid" style="color: blue;" data-width="30" data-height="30"></span>Home</a>
-        </div>
-        <div class="respnavitem">
-            <a href="https://progettochearia.it/about"><span class="iconify-inline" data-icon="fluent:book-contacts-28-filled" style="color: blue;" data-width="30" data-height="30"></span>About</a>
-        </div>
-        <div class="respnavitem">
-            <a href="https://progettochearia.it/gallery"><span class="iconify-inline" data-icon="ooui:image-gallery" style="color: blue;" data-width="30" data-height="30"></span>Gallery</a>
-        </div>
-        <div class="respnavitem">
-            <a href="htpps://web.progettochearia.it"><span class="iconify-inline" data-icon="dashicons:database" style="color: blue;" data-width="30" data-height="30"></span>Dati</a>
-        </div>
-    </nav>
-    <nav id="navbar">
-        <div class="logo">
-            CHeArIA
-            <span class="iconify-inline" data-icon="si-glyph:balloon" style="color: blue;" data-width="50" data-height="50"></span>
-        </div>
-        <ul>
-            <li><a href="https://progettochearia.it">Home</a></li>
-            <li><a href="https://progettochearia.it/about">About</a></li>
-            <li><a href="https://progettochearia.it/gallery">Gallery</a></li>
-            <li><a href="https://web.progettochearia.it">Dati</a></li>
-        </ul>
-        <div class="locationdx">
-            Milano <br> Liceo Cremona
-        </div>
-    </nav>
-    <header>
-        <b>Work in Progress!</b>
+    <div id="data-finder">
+        <form id="data-picker">
+            <fieldset>
+                <div id="type-picker">
+                    <label for="type-select">Seleziona il formato</label>
+                    <select id="type-select" name="type">
+                        <option value="html">HTML</option>
+                        <option value="json">JSON</option>
+                    </select>
+                </div>
+                <div id="sort-picker">
+                    <label for="sort-select">Seleziona il tipo di ordinamento</label>
+                    <select id="sort-select" name="sort">
+                    <option value="asc">Ascendente</option>
+                    <option value="desc">Discendente</option>
+                </select>
+                </div>
+            </fieldset>
+            <fieldset required>
+                <legend>Seleziona i dati da elencare</legend>
+                <div class="list-id">
+                    <div class="data-id"><input type="checkbox" name="dataid" id="itwork" value="itwork"> <label for="itwork">itwork</label><br>
+                        <input type="checkbox" name="dataid" id="temperature" value="temperature"> <label for="temperature">temperature</label><br>
+                        <input type="checkbox" name="dataid" id="humidity" value="humidity"> <label for="humidity">humidity</label></div>
+                    <div class="data-id"><input type="checkbox" name="dataid" id="pressure" value="pressure"> <label for="pressure">pressure</label><br>
+                        <input type="checkbox" name="dataid" id="CO" value="CO"> <label for="CO">CO</label><br>
+                        <input type="checkbox" name="dataid" id="ozone" value="ozone"> <label for="ozone">ozone</label></div>
+                </div>
 
+            </fieldset>
+            <div id="date-picker-all">
+                <fieldset>
+                    <legend>Scegli se selezionare i dati per giorno o per un range</legend>
+                    <div id="date-picker">
+                        <input type="radio" id="day" value="day" name="select-type" checked> <label for="day">Giorno</label>
+                        <input type="radio" id="range" value="range" name="select-type"> <label for="range">Range</label>
+                    </div>
+                    <div id="day-picker">
+                        <label for="date">Data: </label>
+                        <input type="date" id="date" name="day">
+                    </div>
+                    <div id="range-picker">
+                        <label for="start-date">Data inizio: </label>
+                        <input type="datetime-local" id="start-date" name="gte" step="1">
+                        <label for="end-date">Data fine: </label>
+                        <input type="datetime-local" id="end-date" name="lte" step="1">
+                    </div>
+                </fieldset>
+            </div>
+            <input type="submit" id="submit">
 
-    </header>
-    <div class="datas">
-        <div class="graph">
-            <div class="graph-name">
-                <b>Temperature</b>
-            </div>
-            <img src="/img/placeholder.jpg" alt="placeholder" id="graph">
-        </div>
-        <div class="graph">
-            <div class="graph-name">
-                <b> CO</b>
-            </div>
-            <img src="/img/placeholder.jpg" alt="placeholder" id="graph">
-        </div>
-        <div class="graph">
-            <div class="graph-name">
-                <b> PM2.5</b>
-            </div>
-            <img src="/img/placeholder.jpg" alt="placeholder" id="graph">
-        </div>
-        <div class="graph">
-            <div class="graph-name">
-                <b>O3</b>
-            </div>
-            <img src="/img/placeholder.jpg" alt="placeholder" id="graph">
-        </div>
+        </form>
+        <div id="url-result">
 
-
+        </div>
     </div>
-
-
+    <script src="app.js"></script>
 </body>
 
 </html>
