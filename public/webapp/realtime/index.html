@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real time data</title>
+    <style>
+        section {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            flex-wrap: nowrap;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root">
+        <div>
+            <h2>Realt time data</h2>
+            <b>Scegli che dati ricevere</b>
+            <form id="id_data">
+                <div class="input"><input type="checkbox" name="dataid" id="itwork" value="itwork"> <label for="itwork">itwork</label></div>
+                <div class="input"><input type="checkbox" name="dataid" id="temperature" value="temperature"> <label for="temperature">temperature</label></div>
+                <div class="input"><input type="checkbox" name="dataid" id="humidity" value="humidity"> <label for="humidity">humidity</label></div>
+                <div class="input"><input type="checkbox" name="dataid" id="pressure" value="pressure"> <label for="pressure">pressure</label></div>
+                <div class="input"><input type="checkbox" name="dataid" id="CO" value="CO"> <label for="CO">CO</label></div>
+                <div class="input"><input type="checkbox" name="dataid" id="ozone" value="ozone"> <label for="ozone">ozone</label></div>
+
+            </form>
+        </div>
+        <section id="container_data">
+
+        </section>
+
+    </div>
+    <script src="/realtime/app.js"></script>
+</body>
+
+</html>
