@@ -1,13 +1,13 @@
 let data_form = document.querySelector("#data-picker")
 
-data_form.querySelector("#date-picker").addEventListener("change", e => {
+data_form.querySelector("#date-picker").addEventListener("change", e => { //cambia la visulizzazione tra input giorno e range
     let value = e.target.value;
     data_form.querySelector(`#${value}-picker`).style.display = "block";
     let hide_value = ["day", "range"][1 - ["day", "range"].indexOf(value)];
     data_form.querySelector(`#${hide_value}-picker`).style.display = "none";
 });
 
-function data_required(advise) {
+function data_required(advise) { //avvisa i dati che non sono stati inseriti
 
     let newDiv = document.createElement("div");
     newDiv.setAttribute("id", "data-required");
@@ -17,7 +17,7 @@ function data_required(advise) {
 
 }
 
-function formatDate(date) {
+function formatDate(date) { //format date to yyyy-mm-dd_hh:mm:ss
     let day = date.getDate().toString();
     if (day.length == 1) day = "0" + day;
     let month = (date.getMonth() + 1).toString();
