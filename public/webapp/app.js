@@ -32,7 +32,7 @@ function formatDate(date) {
     return `${year}-${month}-${day}_${hour}:${minute}:${second}`;
 }
 
-data_form.addEventListener("submit", e => {
+data_form.addEventListener("submit", e => { //quando si manda il form
     e.preventDefault();
     let formData = new FormData(data_form);
     if (document.querySelector("#url-link")) {
