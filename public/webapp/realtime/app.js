@@ -11,14 +11,12 @@ state.datasSource.addEventListener("datas", async event => {
     if (data["metadata"]) {
         let dataid = data["metadata"]["id"];
         if (form[dataid].checked) {
-            if (!document.querySelector(`#container_${dataid}`)) {
-                let container = document.createElement("div");
-                container.id = `container_${dataid}`;
-                container.innerHTML = `<h2>${dataid}</h2>`;
-                document.querySelector("#container_data").appendChild(container);
-            };
-            document.querySelector(`#container_${dataid}`).innerHTML += `
+            try {
+                document.querySelector(`#container_${dataid}`).innerHTML += `
             <div>time: ${data["timestamp"]}<br> value: ${data["value"]}</div>`;
+            } catch (e) {
+                console.log("Error in add data to view")
+            }
         }
 
     }
@@ -28,7 +26,24 @@ form.addEventListener("change", () => {
     let data = new FormData(form);
     let datas_id = data.getAll("dataid");
     let edit_data = state.showed_data
-        .filter(dataid => { if (!datas_id.includes(dataid)) document.querySelector(`#container_${dataid}`).remove() })
+        .filter(dataid => {
+            if (!datas_id.includes(dataid)) {
+                document.querySelector(`#container_${dataid}`).remove()
+            }
+        })
+        .concat(datas_id.filter(dataid => {
+            if (!state.showed_data.includes(dataid)) {
+                let container = document.createElement("div");
+                container.id = `container_${dataid}`;
+                container.innerHTML = `<h2>${dataid}</h2>`;
+                document.querySelector("#container_data").appendChild(container);
+            }
+        }))
+
     state.showed_data = datas_id;
 
 })
+
+
+
+//
