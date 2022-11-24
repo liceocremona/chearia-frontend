@@ -6,7 +6,7 @@ Client e sito web del progetto Chearia
   </a>
   <h3 align="center">CheAria</h3>
   <p align="center">
-    <a href="https://progettochearia.it/">progettochearia.it</a>
+    <a href="https://progettochearia.it/">progettochearia.it</a><br>
     <a href="https://web.progettochearia.it/">web.progettochearia.it</a>
   </p>
 </div>
