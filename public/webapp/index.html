@@ -23,9 +23,14 @@
             flex: 50%;
         }
         
-        .realtime-link {
+        .links {
             font-size: 130%;
-            padding-bottom: 1em;
+            position: absolute;
+            top: 20em
+        }
+        
+        .links section {
+            margin-top: 0.7em;
         }
         
         h2 {
@@ -35,9 +40,6 @@
 </head>
 
 <body>
-    <div id="realtime-link" class="realtime-link">
-        <a href="/realtime">Guarda dati in tempo reale</a>
-    </div>
     <div id="data-finder">
         <h2>Cerca i dati nel DB</h2>
         <form id="data-picker">
@@ -95,11 +97,16 @@
             <input type="submit" id="submit">
 
         </form>
-        <div id="url-result">
+        <div id="url-result" class="url-result">
 
         </div>
-    </div>
-    <script src="./app.js"></script>
+
+        <div id="links" class="links">
+            <section><a href="/realtime">Guarda dati in tempo reale</a></section>
+            <section><a href="https://progettochearia.it/dati/">Guarda i grafici per data</a></section>
+            <section><a href="https://api.progettochearia.it/v1/resources/graph/all?type=html">Guarda la lista di tutti i grafici</a></section>
+        </div>
+        <script src="./app.js"></script>
 </body>
 
 </html>
