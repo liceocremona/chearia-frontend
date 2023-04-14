@@ -92,9 +92,14 @@ header{
 }
 form{
     display: flex;
-    justify-content: center;
+    flex-direction: column ;
+    align-items: center;
+    margin-top: 1em;
     font-size: 20px;
     font-family: 'Noto Sans TC', sans-serif;
+}
+form>p {
+    margin-left: 0.5em;
 }
 form>div {
     margin: 10px;
