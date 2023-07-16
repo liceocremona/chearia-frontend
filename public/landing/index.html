@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Progetto CHeArIA</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,133 +14,99 @@
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
     <link rel="stylesheet" href="home.css">
 </head>
+
 <body>
     <!--Navbar for mobile-->
-<nav id="respnav">
-    <div class="respnavitem">
-        <a href="/"><span class="iconify-inline" data-icon="clarity:home-solid" style="color: blue;" data-width="30" data-height="30"></span>Home</a>
-    </div>
-    <div class="respnavitem">
-        <a href="https://blog.progettochearia.it/"><span class="iconify" data-icon="uil:blogger" style="color: blue;" data-width="30" data-height="30"></span>Blog</a>
-    </div>
-    <div class="respnavitem">
-        <a href="/about"><span class="iconify-inline" data-icon="fluent:book-contacts-28-filled" style="color: blue;" data-width="30" data-height="30"></span>About</a>
-    </div>
-    <div class="respnavitem">
-        <a href="/gallery"><span class="iconify-inline" data-icon="ooui:image-gallery" style="color: blue;" data-width="30" data-height="30"></span>Gallery</a>
-    </div>
-    <div class="respnavitem">
-        <a href="/dati"><span class="iconify-inline" data-icon="dashicons:database" style="color: blue;" data-width="30" data-height="30"></span>Dati</a>
-    </div>
-</nav>
+    <nav id="respnav">
+        <div class="respnavitem">
+            <a href="/"><span class="iconify-inline" data-icon="clarity:home-solid" style="color: blue;" data-width="30" data-height="30"></span>Home</a>
+        </div>
+        <div class="respnavitem">
+            <a href="https://blog.progettochearia.it/"><span class="iconify" data-icon="uil:blogger" style="color: blue;" data-width="30" data-height="30"></span>Blog</a>
+        </div>
+        <div class="respnavitem">
+            <a href="/about"><span class="iconify-inline" data-icon="fluent:book-contacts-28-filled" style="color: blue;" data-width="30" data-height="30"></span>About</a>
+        </div>
+        <div class="respnavitem">
+            <a href="/gallery"><span class="iconify-inline" data-icon="ooui:image-gallery" style="color: blue;" data-width="30" data-height="30"></span>Gallery</a>
+        </div>
+        <div class="respnavitem">
+            <a href="/dati"><span class="iconify-inline" data-icon="dashicons:database" style="color: blue;" data-width="30" data-height="30"></span>Dati</a>
+        </div>
+    </nav>
     <nav id="navbar">
         <div class="logo">
             CHeArIA
             <span class="iconify-inline" data-icon="si-glyph:balloon" style="color: blue;" data-width="50" data-height="50"></span>
         </div>
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="https://blog.progettochearia.it/">Blog</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/gallery">Gallery</a></li>
-            <li><a href="/dati">Dati</a></li>
+            <li>
+                <a href="/" content="bar-item1"></a>
+            </li>
+            <li>
+                <a href="https://blog.progettochearia.it/" content="bar-item2"></a>
+            </li>
+            <li>
+                <a href="/about" content="bar-item3"></a>
+            </li>
+            <li>
+                <a href="/gallery" content="bar-item4"></a>
+            </li>
+            <li>
+                <a href="/dati" content="bar-item5"></a>
+            </li>
         </ul>
         <div class="locationdx">
-            Milano <br> Liceo Cremona
+            Milano <br> Liceo Scientifico Luigi Cremona
         </div>
     </nav>
     <div class="header">
-        <div class="headertitle">
-            Progetto CHeAr[I.A.]
+        <div class="headertitle" content="header-title">
+
         </div>
-        <div class="headerdesc">
-            Da Giugno 2021 monitoriamo <br>l'aria della città
+        <div class="headerdesc" content="header-desc">
+
         </div>
         <div class="headerbtn">
-            <a href="/dati">Dati</a>
+            <a href="/dati" content="header-btn"></a>
         </div>
     </div>
 
-    <div class="title1">
-        Come Funziona?
+    <div class="title1" content="title1">
+
     </div>
     <div class="element1">
         <img src="img/foto box aerea.jpg" alt="" srcset="">
-        <div class="desc1">
-            Il progetto consiste in una box-aerea attaccata a un pallone aerostatico contenente diversi sensori rilevanti diverse sostanze inquinanti (tra cui CO, O3, PM2.5), altitudine e temperatura. Il sistema svolge scansioni verticali per poter confrontare tali valori in relazione all’altezza. All’interno della box, oltre ai sensori, sono presenti due schede arduino: una scheda Arduino Mega e una ‘mkr1010wifi’, entrambe collegate a un powerbank di comunicazione diretta seriale, il quale, tramite uno switch di logica di voltaggio ‘mkr’, permette la trasmissione dei dati. 
-            Infine, tramite le librerie di arduino, si riescono a collezionare dati su database e analizzarli.
+        <div class="desc1" content="desc1">
+
 
         </div>
+    </div>
+    <div class="title1" content="title2">
+
     </div>
     <div class="element1">
-        <img src="img/solarpanel.jpg" alt="" srcset="">
-        <div class="desc1">
-            Il sistema energetico è composto da: un pannello fotovoltaico che produce energia,
-            un controller che evita sovraccarichi, una batteria che funziona come riserva di energia,
-            un motoriduttore che alza e abbassa un aerostato.
-            Il pannello è monocristallino (ha quindi una resa effettiva del 14,22% rispetto al totale assorbimento di raggi solari), 
-            ha misure di 1 m in lunghezza e 50 cm in larghezza (quindi area di 0,5 m²) e sarà posizionato sul tetto della scuola rivolto verso sud e con inclinazione rispetto al terreno di 30° perchè sfrutta al massimo i raggi solari durante tutto l’anno.
-
-        </div>
-        
-    </div>
-
-    <div class="title1">
-        Cosa Misuriamo?
-    </div>
-    <div class="element3">
-        <div class="polluant">
-            Temperatura
-            <div class="polluant-name">
-                
-            </div>
-        </div>
-        <div class="polluant">
-            Umidità
-            <div class="polluant-name">
-                
-            </div>
-        </div>
-        <div class="polluant">
-            Pressione
-            <div class="polluant-name">
-                
-            </div>
-        </div>
-        <div class="polluant">
-            Altitudine
-            <div class="polluant-name">
-                
-            </div>
-        </div>
         <div class="polluant">
             CO
-            <div class="polluant-name">
-                Monossido di <br> Carbonio
+            <div class="polluant-name" content="polluant-name1">
+
+            </div>
+        </div>
+        <div class="polluant">
+            PM2.5
+            <div class="polluant-name" content="polluant-name2">
+
             </div>
         </div>
         <div class="polluant">
             O3
-            <div class="polluant-name">
-                Ozono
-            </div>
-        </div>
-        <div class="polluant">
-            NO2
-            <div class="polluant-name">
-                Anidride <br> Nitrosa
-            </div>
-        </div>
-        <div class="polluant">
-            NH3
-            <div class="polluant-name">
-                Ammoniaca
-            </div>
-        </div>
+            <div class="polluant-name" content="polluant-name3">
 
+            </div>
+        </div>
     </div>
 
-   
+
     <div class="footer">
         <div class="icons">
             <a href=""><i class="fab fa-facebook"></i></a>
@@ -147,8 +115,10 @@
             <a href="#"><i class="fab fa-twitter"></i></a>
         </div>
         <div class="company">
-            Progetto CHeArIA &copy; 2022, ALL Rights Reserved
+            Progetto CHeArIA &copy; 2023, ALL Rights Reserved
         </div>
     </div>
+    <script src="/language.js"></script>
 </body>
+
 </html>

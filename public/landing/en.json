@@ -9,9 +9,9 @@
     "header-btn": "Datas",
     "title1": "How it works?",
     "desc1": " Il progetto consiste in una box-aerea attaccata a un pallone aerostatico contenente diversi sensori rilevanti diverse sostanze inquinanti (tra cui CO, O3, PM2.5), altitudine e temperatura. Il sistema svolge scansioni verticali per poter confrontare tali valori in relazione all’altezza. All’interno della box, oltre ai sensori, sono presenti due schede arduino: una scheda Arduino Mega e una ‘mkr1010wifi’, entrambe collegate a un powerbank di comunicazione diretta seriale, il quale, tramite uno switch di logica di voltaggio ‘mkr’, permette la trasmissione dei dati. Infine, tramite le librerie di arduino, si riescono a collezionare dati su database e analizzarli.",
-    "title2": "Cosa Misuriamo?",
-    "polluant-name1": "Monossido <br> di Carbonio",
-    "polluant-name2": "Polveri sottili",
-    "polluant-name3": "Ozono"
+    "title2": "What we monitor?",
+    "polluant-name1": "Carbon monoxide",
+    "polluant-name2": "Particulate matter",
+    "polluant-name3": "Ozone"
 
 }
